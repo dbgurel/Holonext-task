@@ -1,9 +1,11 @@
 import './App.css';
+import Slider from './components/Slider';
+import { SliderData } from './components/SliderData';
 
 function App() {
   return (
     <>
-      {console.log('merhaba')}
+      <Slider slides={SliderData}></Slider>
     </>
   )
 }
