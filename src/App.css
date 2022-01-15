@@ -1,15 +1,20 @@
 *{
   margin: 0;
+  box-sizing: border-box;
 }
 .mainContainer{
   display: grid;
+  height:100vh;
+  width: 100vw;
   grid-template-columns: auto;
-  grid-template-rows: 25% 50% 25%;
+  grid-template-rows: 15% 75% 10%;
+  position: relative;
 }
 .title{
   display: grid;
   grid-row: 1/2;
   grid-column: 1/2;
+  height: 15vh;
   justify-content: center;
   align-content: center;
   background-color: rgb(2, 7, 49);
@@ -19,45 +24,309 @@
 }
 
 .slider {
+  position: relative;
   display: grid;
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 100vh;
-  position: relative;
-  background-color: rgba(6, 141, 194, 0.616);
-
+  height: 75vh;
+  background-color: #2DA3D7;
+  justify-content: center;
 }
-.alt-menu{
-  display: grid;
-  grid-row: 3/4;
-  grid-column: 1/2;
+.images {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
-
-.image {
-
-  width: 1000px;
-  height: 600px;
+.description{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #6ec3e7;
+  width: 45%;
+  margin-left: 30%;
+  padding: 10px 0 10px 0;
   border-radius: 10px;
 }
-
+.btn{
+  background-color: rgb(2, 7, 49);
+  color: white;
+  font-size: 12;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .right-arrow{
   position: absolute;
-  top: 50%;
-  right: 3%;
-  font-size: 3rem;
-  color: black;
+  top: 45%;
+  right: 10%;
+  font-size:100%;
+  color: #fff;
   cursor: pointer;
   user-select: none;
   z-index: 5;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
 }
-
 .left-arrow{
   position: absolute;
-  top: 50%;
-  left: 3%;
-  font-size: 3rem;
-  color: black;
+  top: 45%;
+  left: 10%;
+  font-size: 100%;
+  color: #fff;
   cursor: pointer;
   z-index: 5;
   user-select: none;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
 }
+.altMenu{
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+}
+.menuContent{
+  display: flex;
+  height: 100%;
+  padding-left: 15px;
+  background-color: rgb(23, 26, 32);
+}
+.menuItem{
+  color: rgb(125, 100, 194);
+  font-size: 10pt;
+  padding-left: 15px;
+  margin-bottom:50px;
+  transition-duration: 1.2s;
+  transform: scaleX(1.5);
+  cursor: pointer;
+  height: 100%;
+  z-index: 10;
+}
+.menuDisabled{
+  display: none;
+}
+.menu-icon{
+  color: white;
+  font-size: 15pt;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.menu-icon-disabled{
+  color: white;
+  font-size: 15pt;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: none;
+}
+.activeSlider{
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: 8%;
+  height: 100%;
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1.01);
+}
+.slide{
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.footer{
+
+  position: absolute;
+  height: 100%;
+  left:45%;
+  top: 100%;
+}
+.footer p {
+  color:white;
+  font-size: 6pt;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For Tablets */
+  .footer p {
+    color:white;
+    font-size: 10pt;
+  }
+  .activeSlider{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 8%;
+    left:25%;
+    height: 100%;
+    opacity: 1;
+    transition-duration: 1.5s;
+    transform: scale(1.01);
+  }
+  .right-arrow{
+    position: absolute;
+    top: 45%;
+    right: 14%;
+    font-size:35px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+  }
+  .left-arrow{
+    position: absolute;
+    top: 45%;
+    left: 14%;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    user-select: none;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+  }
+  }
+
+@media only screen and (min-width: 1024px) {
+    /* For Laptops */
+
+    .activeSlider{
+      position: absolute;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      top: 10%;
+      left:29%;
+      height: 100%;
+      opacity: 1;
+      transition-duration: 1.5s;
+      transform: scale(1.08);
+    }
+    .right-arrow{
+      position: absolute;
+      top: 45%;
+      right: 30%;
+      font-size:35px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      z-index: 5;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50%;
+    }
+    .left-arrow{
+      position: absolute;
+      top: 45%;
+      left: 30%;
+      font-size: 35px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 5;
+      user-select: none;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50%;
+    }
+    }
+
+@media only screen and (min-width: 1440px) {
+      /* For Laptops */
+  
+      .activeSlider{
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        left:35%;
+        height: 100%;
+        opacity: 1;
+        transition-duration: 1.5s;
+        transform: scale(1.08);
+      }
+      .right-arrow{
+        position: absolute;
+        top: 45%;
+        right: 30%;
+        font-size:35px;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        z-index: 5;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+      }
+      .left-arrow{
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 5;
+        user-select: none;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+      }
+      }
+
+@media only screen and (min-width: 2560px) {
+  /* For Laptops */
+    
+  .activeSlider{
+      position: absolute;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      top: 15%;
+      left:42%;
+      height: 100%;
+      opacity: 1;
+      transition-duration: 1.5s;
+      transform: scale(1.2);
+    }
+    .right-arrow{
+      position: absolute;
+      top: 45%;
+      right: 40%;
+      font-size:45px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      z-index: 5;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50%;
+    }
+    .left-arrow{
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      font-size: 45px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 5;
+      user-select: none;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50%;
+    }
+    }
+  
