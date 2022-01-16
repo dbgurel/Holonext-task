@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/holonext-myTask/static/css/main.067b71e4.css",
-    "main.js": "/holonext-myTask/static/js/main.958024d3.js",
+    "main.css": "/holonext-myTask/static/css/main.504b8631.css",
+    "main.js": "/holonext-myTask/static/js/main.8abd06ea.js",
     "static/js/787.aaa3cc5f.chunk.js": "/holonext-myTask/static/js/787.aaa3cc5f.chunk.js",
     "static/media/knight.PNG": "/holonext-myTask/static/media/knight.7564ae6b91a4d80dd80b.PNG",
     "static/media/spartan.PNG": "/holonext-myTask/static/media/spartan.00a43c6bfbf9e6a329b7.PNG",
     "static/media/beko_mixer.PNG": "/holonext-myTask/static/media/beko_mixer.f016e5b0831153b86706.PNG",
     "index.html": "/holonext-myTask/index.html",
-    "main.067b71e4.css.map": "/holonext-myTask/static/css/main.067b71e4.css.map",
-    "main.958024d3.js.map": "/holonext-myTask/static/js/main.958024d3.js.map",
+    "main.504b8631.css.map": "/holonext-myTask/static/css/main.504b8631.css.map",
+    "main.8abd06ea.js.map": "/holonext-myTask/static/js/main.8abd06ea.js.map",
     "787.aaa3cc5f.chunk.js.map": "/holonext-myTask/static/js/787.aaa3cc5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.067b71e4.css",
-    "static/js/main.958024d3.js"
+    "static/css/main.504b8631.css",
+    "static/js/main.8abd06ea.js"
   ]
 }
