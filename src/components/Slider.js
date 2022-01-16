@@ -33,7 +33,7 @@ const Slider = ({ slides }) => {
                 <a href='https://holonext.com'><img src={Logo} className='title-logo' /></a>
             </section>
             <section className='slider' >
-                <div className='arrows'>
+                <div>
                     <FaArrowLeft className='left-arrow' onClick={() => { prevSlide() }} />
                     <FaArrowRight className='right-arrow' onClick={() => { nextSlide() }} />
                 </div>
